@@ -17,54 +17,12 @@
 		<item name="com.maxmpz.audioplayer:TopSleepTimerButtonLayout">@style/AAA_TopSleepTimerButtonLayout</item>
 		<item name="com.maxmpz.audioplayer:TopVisButtonLayout">@style/AAA_TopVisButtonLayout</item>
 
-
-		<!-- Disable waveseek -->
-		<item name="com.maxmpz.audioplayer:TopWaveseek">@style/AAA_TopWaveseek</item>
-
-		<!-- Adjust our waveseek layout => push it to the top of navbar, ignoring meta info. We also apply this style for SampleSkinAAA_ -->
-		<item name="com.maxmpz.audioplayer:TopWaveseekLayout">@style/AAA_TopWaveseekLayout</item>
-
-		<!-- Inject our layout into waveseek container layout -->
-		<item name="com.maxmpz.audioplayer:TopWaveseekLayout_extraLayout">@layout/merge_topwaveseeklayout_aaa</item>
-
-		<!-- Override buttons, shift them up -->
-		<item name="com.maxmpz.audioplayer:TopPlay">@style/AAA_TopPlay</item>
-		<item name="com.maxmpz.audioplayer:TopPlay_scene_playing">@style/AAA_TopPlay_scene_playing</item>
-
-		<item name="com.maxmpz.audioplayer:TopPause">@style/AAA_TopPause</item>
-		<item name="com.maxmpz.audioplayer:TopPause_scene_playing">@style/AAA_TopPause_scene_playing</item>
-
-		<item name="com.maxmpz.audioplayer:TopPrevCat">@style/AAA_TopPrevCat</item>
-		<item name="com.maxmpz.audioplayer:TopRw">@style/AAA_TopRw</item>
-		<item name="com.maxmpz.audioplayer:TopRw_scene_playing">@style/AAA_TopRw_scene_playing</item>
-		<item name="com.maxmpz.audioplayer:TopFf">@style/AAA_TopFf</item>
-		<item name="com.maxmpz.audioplayer:TopFf_scene_playing">@style/AAA_TopFf_scene_playing</item>
-		<item name="com.maxmpz.audioplayer:TopNextCat">@style/AAA_TopNextCat</item>
-
-		<!-- Override all buttons state_seeking to avoid fading out when seek happens. One style used for all of those -->
-		<item name="com.maxmpz.audioplayer:TopPause_state_seeking">@style/AAA_TopPause_state_seeking</item>
-		<item name="com.maxmpz.audioplayer:TopPlay_state_seeking">@style/AAA_TopPause_state_seeking</item>
-
-		<!-- Override elapsed / duration, put them to bottom -->
-		<item name="com.maxmpz.audioplayer:TopTrackElapsed">@style/AAA_TopTrackElapsed</item>
-		<item name="com.maxmpz.audioplayer:TopTrackElapsed_scene_playing">@style/AAA_TopTrackElapsed_scene_playing</item>
-
-		<item name="com.maxmpz.audioplayer:TopTrackDuration">@style/AAA_TopTrackDuration</item>
-		<item name="com.maxmpz.audioplayer:TopTrackDuration_scene_playing">@style/AAA_TopTrackDuration_scene_playing</item>
-
 		<!-- Override zooming when seeking -->
 		<item name="com.maxmpz.audioplayer:TopTrackElapsed_state_seeking">@style/AAA_TopTrackElapsed_state_seeking</item>
 		<item name="com.maxmpz.audioplayer:TopTrackDuration_state_seeking">@style/AAA_TopTrackElapsed_state_seeking</item><!-- Same style -->
 
 		<!-- Slightly offset meta info -->
 		<item name="com.maxmpz.audioplayer:TopMetaInfoLayout">@style/AAA_TopMetaInfoLayout</item>
-
-		<!-- NOTE: as we attach rating to the right, it makes a sense to make stars expand to the left, thus, setting right gravity.
-		     RatingBar gravity is not dynamic property, so need to redefine base style -->
-		<item name="com.maxmpz.audioplayer:ItemRatingBar">@style/AAA_ItemRatingBar</item>
-		<item name="com.maxmpz.audioplayer:ItemRatingBar_scene_item_menu_lu">@style/AAA_ItemRatingBar_scene_item_menu_lu</item>
-		<!-- Don't grow so much on rating bar press -->
-		<item name="com.maxmpz.audioplayer:ItemRatingBar_anim_ratingbar_pressed">@style/AAA_ItemRatingBar_anim_ratingbar_pressed</item>
 
 		<!-- Override various item styles for scene_aa -->
 		<item name="com.maxmpz.audioplayer:ItemTrackAAImage_scene_aa">@style/AAA_ItemTrackAAImage_scene_aa</item>
@@ -78,8 +36,6 @@
 
 		<item name="com.maxmpz.audioplayer:ItemLike_scene_aa">@style/AAA_ItemLike_scene_aa</item>
 		<item name="com.maxmpz.audioplayer:ItemUnlike_scene_aa">@style/AAA_ItemUnlike_scene_aa</item>
-
-		<item name="com.maxmpz.audioplayer:ItemRatingBar_scene_aa">@style/AAA_ItemRatingBar_scene_aa</item>
 
 		<!-- Uncomment to remove background for title for grid scenes (as we move labels below image in list).
 		     It's used in this skin for better zoom transitions (with backgrounds visible during zooming) -->
@@ -98,16 +54,6 @@
 
 		<!-- Make menu button similar to like/unlike buttons -->
 		<item name="com.maxmpz.audioplayer:ItemTrackMenu">@style/AAA_ItemTrackMenu</item>
-
-		<!-- Add background panel behind text (just for scene_aa*). This view is never used in Poweramp but available for skins.
-		     Enable this if such background is needed -->
-		<!--
-		<item name="com.maxmpz.audioplayer:ItemTrackAAPanel">@style/AAA_ItemTrackAAPanel</item>
-		<item name="com.maxmpz.audioplayer:ItemTrackAAPanel_scene_aa">@style/AAA_ItemTrackAAPanel_scene_aa</item>
-		<item name="com.maxmpz.audioplayer:ItemTrackAAPanel_scene_aa_playing">@style/AAA_ItemTrackAAPanel_scene_aa</item>
-		<item name="com.maxmpz.audioplayer:ItemTrackAAPanel_scene_aa_vis">@style/AAA_ItemTrackAAPanel_scene_aa</item>
-		<item name="com.maxmpz.audioplayer:ItemTrackAAPanel_scenes_hidden">@style/AAA_ItemTrackAAPanel_scenes_hidden</item>
-		-->
 
 		<!-- Redefine some paddings in TopListWidget listSubstyle -->
 		<item name="com.maxmpz.audioplayer:TopListWidget">@style/AAA_TopListWidget</item>
@@ -264,6 +210,7 @@
 		<item name="android:scaleY">@dimen/AAA_TopShuffleButtonLayout_scale</item>
 		<item name="com.maxmpz.audioplayer:layout_compensateScale">@dimen/AAA_TopShuffleButtonLayout_scale</item>
 		<item name="android:layout_marginRight">0dp</item>
+		<item name="android:visibility">invisible</item>
 	</style>
 	<style name="AAA_TopSleepTimerButtonLayout" parent="com.maxmpz.audioplayer:TopSleepTimerButtonLayout">
 		<item name="android:transformPivotX">0px</item>
@@ -272,6 +219,7 @@
 		<item name="android:scaleY">@dimen/AAA_TopShuffleButtonLayout_scale</item>
 		<item name="com.maxmpz.audioplayer:layout_compensateScale">@dimen/AAA_TopShuffleButtonLayout_scale</item>
 		<item name="android:layout_marginLeft">@dimen/AAA_TopSleepTimerButtonLayout_marginLeft</item><!-- Need to offset this button due to the scaling -->
+		<item name="android:visibility">invisible</item>
 	</style>
 	<style name="AAA_TopRepeatButtonLayout" parent="com.maxmpz.audioplayer:TopRepeatButtonLayout">
 		<item name="android:transformPivotX">0px</item>
@@ -279,6 +227,7 @@
 		<item name="android:scaleX">@dimen/AAA_TopShuffleButtonLayout_scale</item>
 		<item name="android:scaleY">@dimen/AAA_TopShuffleButtonLayout_scale</item>
 		<item name="com.maxmpz.audioplayer:layout_compensateScale">@dimen/AAA_TopShuffleButtonLayout_scale</item>
+		<item name="android:visibility">invisible</item>
 	</style>
 	<style name="AAA_TopShuffleButtonLayout" parent="com.maxmpz.audioplayer:TopShuffleButtonLayout">
 		<item name="android:transformPivotX">0px</item>
@@ -286,6 +235,7 @@
 		<item name="android:scaleX">@dimen/AAA_TopShuffleButtonLayout_scale</item>
 		<item name="android:scaleY">@dimen/AAA_TopShuffleButtonLayout_scale</item>
 		<item name="com.maxmpz.audioplayer:layout_compensateScale">@dimen/AAA_TopShuffleButtonLayout_scale</item>
+		<item name="android:visibility">invisible</item>
 	</style>
 
 	<!-- For AA image, set margins which depends on screen size via dimens, as we need smaller margin for smaller screens -->
@@ -412,7 +362,7 @@
 
 	<style name="AAA_ItemRatingBar" parent="com.maxmpz.audioplayer:ItemRatingBar">
 		<!-- NOTE: as we attach rating to the right, it makes a sense to make stars expand to the left, thus, setting right gravity -->
-		<item name="android:gravity">right</item>
+		<item name="android:gravity">left</item>
 		<item name="android:padding">@dimen/AAA_ItemRatingBar_padding</item>
 		<item name="com.maxmpz.audioplayer:drawableWidth">@dimen/AAA_ItemRatingBar_drawableSize</item>
 		<item name="com.maxmpz.audioplayer:drawableHeight">@dimen/AAA_ItemRatingBar_drawableSize</item>
@@ -502,18 +452,6 @@
 		<item name="com.maxmpz.audioplayer:layout_maxWidth">260dp</item>
 	</style>
 
-
-	<!-- No AA blur option.
-		 NOTE: noAABlur option for SampleSkinAAA requires another style as SampleSkinAAA overrides list styles -->
-	<style name="SampleSkinAAA_noAABlur">
-		<!-- We should override listMilkMode in TopListWidget style -->
-		<item name="com.maxmpz.audioplayer:TopListWidget">@style/SampleSkinAAA_noAABlur_TopListWidget</item>
-	</style>
-	<!-- We override own AAA_TopListWidget here, as we already changed this style and still need those changes for this option as well -->
-	<style name="SampleSkinAAA_noAABlur_TopListWidget" parent="@style/AAA_TopListWidget">
-		<item name="com.maxmpz.audioplayer:listMilkMode">none</item>
-	</style>
-
 	<!-- Two bars - seekbar and waveseek, both operational -->
 	<style name="SampleSkinAAA_seekbar_and_waveseek">
 		<!-- Override waveseek again - now re-enable it -->
@@ -538,6 +476,54 @@
 		<!-- Adjust margins so our seekbar width matches waveseek -->
 		<item name="android:layout_marginLeft">8dp</item>
 		<item name="android:layout_marginRight">8dp</item>
+	</style>
+
+	<!-- Optional style for SampleSkin_transparentNavbar option. Poweramp applies optional styles on top of the skin theme, if such option is checked by user in settings.
+     NOTE: as fully transparent navigation bar is supported by Android 8.0+, we have different variants of this style for v21-25 (Android 5-7), and for v26+ (Android 8+).
+     NOTE: this is overriden in values-land (back to default), as we don't want UI to go under navigation bar in landscape, as navigation bar is to the right / left
+-->
+	<style name="SampleSkin_transparentNavbarBase">
+
+		<item name="com.maxmpz.audioplayer:navigationBarBg">#0000</item>
+
+		<item name="com.maxmpz.audioplayer:colorNavbarIcons">#7a7a7a</item><!-- Makes Poweramp navbar icons a bit more contrast for non-white backgrounds possible due to an album art -->
+
+		<item name="com.maxmpz.audioplayer:navbar_elevation">0dp</item><!-- Remove elevation for navbar -->
+
+		<item name="com.maxmpz.audioplayer:Navbar">@style/Navbar_transparentNavbar</item>
+		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_1line_sheet">@style/Navbar_scene_navbar_1line_sheet_transparentNavbar</item>
+		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_2lines">@style/Navbar_scene_navbar_2lines_transparentNavbar</item>
+
+		<!-- Apply same for selection menu container -->
+		<item name="com.maxmpz.audioplayer:TopSelectionMenuContainer">@style/TopSelectionMenuContainer</item>
+
+		<!-- We want Android navigation bar to become non-transparent for lists, as list goes beyond it -->
+		<item name="com.maxmpz.audioplayer:TopFitsNavigationBarView_scenes_non_main">@style/TopFitsNavigationBarView_scenes_non_main</item>
+
+		<!-- To demonstrate animation duration overriding, let's override transition time between main AA and other screens to sync nav bar background animations with it -->
+		<item name="com.maxmpz.audioplayer:TopContainer">@style/TopContainer_transparentNavbar</item>
+	</style>
+
+	<!-- SampleSkin_transparentNavbar variant for v21-v25 (Android 5-7) -->
+	<style name="SampleSkin_transparentNavbar" parent="SampleSkin_transparentNavbarBase">
+		<item name="android:windowTranslucentNavigation">true</item>
+	</style>
+
+	<!-- No need to override all scenes, as we change just background, which is not changed by scenes for Poweramp Navbar.
+	     We also derive from our skin Navbar style to reuse previous modification (e.g. margins) -->
+	<style name="Navbar_transparentNavbar" parent="Navbar">
+		<item name="android:background">#0000</item><!-- NOTE: @null won't work here, as this will make navbar a non-drawing view, thus, no scene background change will happen -->
+		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
+	</style>
+
+
+	<style name="Navbar_scene_navbar_1line_sheet_transparentNavbar" parent="Navbar_scene_navbar_1line_sheet">
+		<item name="android:background">#fff</item><!-- Apply white background for scenes, so navbar has visible background in lists and when expanded -->
+		<item name="com.maxmpz.audioplayer:applyViewParams">true</item><!-- Enables background changes for scene -->
+	</style>
+	<style name="Navbar_scene_navbar_2lines_transparentNavbar" parent="Navbar_scene_navbar_2lines">
+		<item name="android:background">#fff</item>
+		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
 	</style>
 
 </resources>

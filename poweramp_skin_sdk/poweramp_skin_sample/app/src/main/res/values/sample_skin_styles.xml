@@ -212,55 +212,7 @@
 
 
 
-	<!-- Optional style for SampleSkin_transparentNavbar option. Poweramp applies optional styles on top of the skin theme, if such option is checked by user in settings.
-	     NOTE: as fully transparent navigation bar is supported by Android 8.0+, we have different variants of this style for v21-25 (Android 5-7), and for v26+ (Android 8+).
-	     NOTE: this is overriden in values-land (back to default), as we don't want UI to go under navigation bar in landscape, as navigation bar is to the right / left
-	-->
-	<style name="SampleSkin_transparentNavbarBase">
 
-		<item name="com.maxmpz.audioplayer:navigationBarBg">#0000</item>
-
-		<item name="com.maxmpz.audioplayer:colorNavbarIcons">#7a7a7a</item><!-- Makes Poweramp navbar icons a bit more contrast for non-white backgrounds possible due to an album art -->
-
-		<item name="com.maxmpz.audioplayer:navbar_elevation">0dp</item><!-- Remove elevation for navbar -->
-
-		<item name="com.maxmpz.audioplayer:Navbar">@style/Navbar_transparentNavbar</item>
-		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_1line_sheet">@style/Navbar_scene_navbar_1line_sheet_transparentNavbar</item>
-		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_2lines">@style/Navbar_scene_navbar_2lines_transparentNavbar</item>
-
-		<!-- Apply same for selection menu container -->
-		<item name="com.maxmpz.audioplayer:TopSelectionMenuContainer">@style/TopSelectionMenuContainer</item>
-
-		<!-- We want Android navigation bar to become non-transparent for lists, as list goes beyond it -->
-		<item name="com.maxmpz.audioplayer:TopFitsNavigationBarView_scenes_non_main">@style/TopFitsNavigationBarView_scenes_non_main</item>
-
-		<!-- To demonstrate animation duration overriding, let's override transition time between main AA and other screens to sync nav bar background animations with it -->
-		<item name="com.maxmpz.audioplayer:TopContainer">@style/TopContainer_transparentNavbar</item>
-	</style>
-
-	<!-- SampleSkin_transparentNavbar variant for v21-v25 (Android 5-7) -->
-	<style name="SampleSkin_transparentNavbar" parent="SampleSkin_transparentNavbarBase">
-		<item name="android:windowTranslucentNavigation">true</item>
-	</style>
-
-
-
-	<!-- No need to override all scenes, as we change just background, which is not changed by scenes for Poweramp Navbar.
-	     We also derive from our skin Navbar style to reuse previous modification (e.g. margins) -->
-	<style name="Navbar_transparentNavbar" parent="Navbar">
-		<item name="android:background">#0000</item><!-- NOTE: @null won't work here, as this will make navbar a non-drawing view, thus, no scene background change will happen -->
-		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
-	</style>
-
-
-	<style name="Navbar_scene_navbar_1line_sheet_transparentNavbar" parent="Navbar_scene_navbar_1line_sheet">
-		<item name="android:background">#fff</item><!-- Apply white background for scenes, so navbar has visible background in lists and when expanded -->
-		<item name="com.maxmpz.audioplayer:applyViewParams">true</item><!-- Enables background changes for scene -->
-	</style>
-	<style name="Navbar_scene_navbar_2lines_transparentNavbar" parent="Navbar_scene_navbar_2lines">
-		<item name="android:background">#fff</item>
-		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
-	</style>
 
 	<style name="TopSelectionMenuContainer" parent="com.maxmpz.audioplayer:TopSelectionMenuContainer">
 		<item name="android:clipToPadding">true</item>
@@ -310,7 +262,7 @@
 		<item name="android:layout_width">32dp</item>
 		<item name="android:layout_height">32dp</item>
 		<item name="android:layout_gravity">right|center_vertical</item>
-		<item name="android:layout_marginRight">16dp</item>
+		<item name="android:layout_marginRight">8dp</item>
 		<item name="android:visibility">visible</item>
 		<!-- Drawable should be set only for activated state -->
 		<item name="android:background">@drawable/playing_mark_selector</item>
@@ -323,7 +275,7 @@
 		<item name="android:layout_width">24dp</item>
 		<item name="android:layout_height">24dp</item>
 		<item name="android:layout_gravity">left|center_vertical</item>
-		<item name="android:layout_marginLeft">20dp</item>
+		<item name="android:layout_marginLeft">8dp</item>
 	</style>
 	<style name="ItemTrackPlayingMark_scene_1">
 		<item name="com.maxmpz.audioplayer:baseScene">defaultScene</item>
